@@ -1,0 +1,73 @@
+name: Deploy Projects to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # 또는 gh-pages, 작업하고자 하는 브랜치로 설정
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the main repository
+      uses: actions/checkout@v2
+
+    # Checkout and build React project
+    - name: Checkout React project
+      uses: actions/checkout@v2
+      with:
+        repository: FOODIETREE/foodietree_FE
+        path: foodietree_FE
+
+    - name: Build React project
+      run: |
+        cd foodietree_FE
+        npm install
+        npm run build
+        cp -r build/* ../public/foodietree_FE/  # 빌드된 정적 파일을 실제 배포 될 장소 public 디렉토리로 복사
+
+    # Checkout and build JavaScript project
+    - name: Checkout JavaScript project
+      uses: actions/checkout@v2
+      with:
+        repository: JSProject/hardestgame
+        path: hardestgame
+
+    - name: Build JavaScript project
+      run: |
+        cd hardestgame
+        npm install
+        npm run build
+        cp -r build/* ../public/hardestgame/  # 빌드된 정적 파일을 public 디렉토리로 복사
+
+    # Checkout and build JSP + Java project
+    - name: Checkout JSP + Java project
+      uses: actions/checkout@v2
+      with:
+        repository: SpringMidProject/workwave
+        path: workwave
+
+    - name: Build JSP + Java project
+      run: |
+        cd workwave
+        ./gradlew build  # Gradle을 사용하여 빌드
+        mkdir -p ../public/workwave
+        cp -r build/*.html ../public/workwave/  # 빌드 결과물의 위치에 따라 수정 필요
+
+    # Generate index.html with links to the projects
+    - name: Generate index.html with project links
+      run: |
+        echo '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>My Projects</title></head><body>' > public/index.html
+        echo '<h1>My Projects</h1><ul>' >> public/index.html
+        echo '<li><a href="foodietree_FE/index.html">Foodietree FE (React)</a></li>' >> public/index.html
+        echo '<li><a href="hardestgame/index.html">Hardestgame (JavaScript)</a></li>' >> public/index.html
+        echo '<li><a href="workwave/index.html">Workwave (JSP + Java)</a></li>' >> public/index.html
+        echo '</ul></body></html>' >> public/index.html
+
+    # Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GH_PAGES_TOKEN }}
+        publish_dir: ./public
