@@ -70,6 +70,13 @@ jobs:
         echo '<li><a href="workwave/index.html">Workwave (JSP + Java)</a></li>' >> public/index.html
         echo '</ul></body></html>' >> public/index.html
 
+    # 테스트 리포트를 아티팩트로 저장
+    - name: Upload Test Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-report
+        path: workwave/build/reports/tests/test/  # 테스트 리포트 파일 경로
+
     # Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
@@ -77,3 +84,5 @@ jobs:
         github_token: ${{ secrets.GH_PAGES_TOKEN }}
         publish_dir: ./public
         publish_branch: gh-pages # gh-pages에서 빌드된 파일 배포 
+
+
