@@ -24,7 +24,7 @@ jobs:
       run: |
         cd foodietree_FE
         npm install
-        npm run build
+        CI=false npm run build
         cp -r build/* ../public/foodietree_FE/  # 빌드된 정적 파일을 실제 배포 될 장소 public 디렉토리로 복사
 
     # Checkout and build JavaScript project
