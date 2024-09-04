@@ -49,6 +49,10 @@ jobs:
         repository: Maybaba/SpringMidProject
         path: workwave
 
+    - name: Set executable permissions for gradlew
+      run: |
+        chmod +x workwave/gradlew
+
     - name: Build JSP + Java project
       run: |
         cd workwave
