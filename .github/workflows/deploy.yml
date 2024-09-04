@@ -33,7 +33,7 @@ jobs:
     - name: Checkout JavaScript project
       uses: actions/checkout@v2
       with:
-        repository: JSProject
+        repository: Maybaba/JSProject
         path: hardestgame
 
     - name: Build JavaScript project
@@ -43,7 +43,7 @@ jobs:
          npm run build
         mkdir -p ../public/hardestgame/
         cp -r build/* ../public/hardestgame/  # 빌드된 정적 파일을 public 디렉토리로 복사
-        
+
 
     # Checkout and build JSP + Java project
     - name: Checkout JSP + Java project
