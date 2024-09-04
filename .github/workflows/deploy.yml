@@ -28,11 +28,12 @@ jobs:
         mkdir -p ../public/foodietree_FE/
         cp -r build/* ../public/foodietree_FE/  # 빌드된 정적 파일을 실제 배포 될 장소 public 디렉토리로 복사
 
+
     # Checkout and build JavaScript project
     - name: Checkout JavaScript project
       uses: actions/checkout@v2
       with:
-        repository: JSProject/hardestgame
+        repository: JSProject
         path: hardestgame
 
     - name: Build JavaScript project
@@ -42,6 +43,7 @@ jobs:
          npm run build
         mkdir -p ../public/hardestgame/
         cp -r build/* ../public/hardestgame/  # 빌드된 정적 파일을 public 디렉토리로 복사
+        
 
     # Checkout and build JSP + Java project
     - name: Checkout JSP + Java project
