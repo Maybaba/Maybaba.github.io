@@ -3,7 +3,7 @@ name: Deploy Projects to GitHub Pages
 on:
   push:
     branches:
-      - master  # 또는 gh-pages, 작업하고자 하는 브랜치로 설정
+      - master  # 또는 gh-pages, 작업하고자 하는 브랜치로 설정, master branch로 push 될 때 워크플로우 실행, push 트리거
 
 jobs:
   build:
@@ -25,6 +25,7 @@ jobs:
         cd foodietree_FE
         npm install
         CI=false npm run build
+        mkdir -p ../public/foodietree_FE/
         cp -r build/* ../public/foodietree_FE/  # 빌드된 정적 파일을 실제 배포 될 장소 public 디렉토리로 복사
 
     # Checkout and build JavaScript project
@@ -38,7 +39,8 @@ jobs:
       run: |
         cd hardestgame
         npm install
-        npm run build
+         npm run build
+        mkdir -p ../public/hardestgame/
         cp -r build/* ../public/hardestgame/  # 빌드된 정적 파일을 public 디렉토리로 복사
 
     # Checkout and build JSP + Java project
@@ -71,4 +73,4 @@ jobs:
       with:
         github_token: ${{ secrets.GH_PAGES_TOKEN }}
         publish_dir: ./public
-        publish_branch: gh-pages
+        publish_branch: gh-pages # gh-pages에서 빌드된 파일 배포 
