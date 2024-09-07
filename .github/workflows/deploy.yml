@@ -53,12 +53,21 @@ jobs:
       run: |
         chmod +x workwave/gradlew
 
+
     - name: Build JSP + Java project
       run: |
+       cd workwave
+       ./gradlew build
+       mkdir -p ../public/workwave
+       cp -r src/main/webapp/WEB-INF/views/* ../public/workwave/
+       
+
+    - name: Debug JSP build directory
+      run: |
         cd workwave
-        ./gradlew build  # Gradle을 사용하여 빌드
-        mkdir -p ../public/workwave
-        cp -r build/*.html ../public/workwave/  # 빌드 결과물의 위치에 따라 수정 필요
+        ls -R build/
+        ls -R src/main/webapp/
+
 
     - name: Set up environment variables for H2
       run: |
