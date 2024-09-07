@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfoodietree_FE=self.webpackChunkfoodietree_FE||[]).push([[913],{6913:(e,s,t)=>{t.r(s),t.d(s,{default:()=>f});t(5043);var d=t(579);const f=()=>(0,d.jsx)("div",{})}}]);
+//# sourceMappingURL=913.3b89d031.chunk.js.map
