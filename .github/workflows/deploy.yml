@@ -60,6 +60,13 @@ jobs:
         mkdir -p ../public/workwave
         cp -r build/*.html ../public/workwave/  # 빌드 결과물의 위치에 따라 수정 필요
 
+    - name: Set up environment variables for H2
+      run: |
+        echo "SPRING_DATASOURCE_URL=jdbc:h2:mem:testdb" >> $GITHUB_ENV
+        echo "SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.h2.Driver" >> $GITHUB_ENV
+        echo "SPRING_DATASOURCE_USERNAME=sa" >> $GITHUB_ENV
+        echo "SPRING_DATASOURCE_PASSWORD=" >> $GITHUB_ENV
+
     # Generate index.html with links to the projects
     - name: Generate index.html with project links
       run: |
