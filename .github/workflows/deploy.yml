@@ -38,6 +38,7 @@ jobs:
 
     - name: Copy JavaScript project
       run: |
+        cd JSProject
         mkdir -p ../public/JSProject/  
         cp -r JSProject/* ../public/JSProject/  
 
