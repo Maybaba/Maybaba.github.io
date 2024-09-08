@@ -34,12 +34,12 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: Maybaba/JSProject
-        path: hardestgame
+        path: JSProject
 
     - name: Copy JavaScript project
       run: |
-        mkdir -p ../public/hardestgame/  # 결과를 저장할 디렉토리 만들기
-        cp -r hardestgame/* ../public/hardestgame/  # 정적 파일을 public 디렉토리로 복사
+        mkdir -p ../public/JSProject/  
+        cp -r JSProject/* ../public/JSProject/  
 
 
     # Checkout and build JSP + Java project
@@ -47,7 +47,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: Maybaba/SpringMidProject
-        path: workwave
+        path: SpringMidProject
 
     - name: Set executable permissions for gradlew
       run: |
@@ -56,15 +56,15 @@ jobs:
 
     - name: Build JSP + Java project
       run: |
-       cd workwave
+       cd SpringMidProject
        ./gradlew build
-       mkdir -p ../public/workwave
-       cp -r src/main/webapp/WEB-INF/views/* ../public/workwave/
+       mkdir -p ../public/SpringMidProject
+       cp -r src/main/webapp/WEB-INF/views/* ../public/SpringMidProject/
        
 
     - name: Debug JSP build directory
       run: |
-        cd workwave
+        cd SpringMidProject
         ls -R build/
         ls -R src/main/webapp/
 
