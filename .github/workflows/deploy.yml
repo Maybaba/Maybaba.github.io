@@ -39,9 +39,9 @@ jobs:
     - name: Copy JavaScript project
       run: |
         cd JSProject
-        mkdir -p ../public/JSProject/  
+         mkdir -p ${{ github.workspace }}/public/JSProject  # ../public/JSProject 디렉토리 생성
         cp -r ${{ github.workspace }}/JSProject/* ../public/JSProject/
-        
+
     - name: Debug JSProject directory
       run: |
         ls -R JSProject/
