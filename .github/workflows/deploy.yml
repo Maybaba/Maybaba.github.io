@@ -51,7 +51,7 @@ jobs:
 
     - name: Set executable permissions for gradlew
       run: |
-        chmod +x workwave/gradlew
+        chmod +x SpringMidProject/gradlew
 
 
     - name: Build JSP + Java project
