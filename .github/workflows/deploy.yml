@@ -41,6 +41,11 @@ jobs:
         mkdir -p ../public/JSProject/  
         cp -r JSProject/* ../public/JSProject/  
 
+    - name: Debug JSProject directory
+      run: |
+        ls -R JSProject/
+        ls -R ../public/JSProject/
+
 
     # Checkout and build JSP + Java project
     - name: Checkout JSP + Java project
