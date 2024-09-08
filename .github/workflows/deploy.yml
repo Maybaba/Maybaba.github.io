@@ -40,8 +40,8 @@ jobs:
       run: |
         cd JSProject
         mkdir -p ../public/JSProject/  
-        cp -r JSProject/* ../public/JSProject/  
-
+        cp -r ${{ github.workspace }}/JSProject/* ../public/JSProject/
+        
     - name: Debug JSProject directory
       run: |
         ls -R JSProject/
