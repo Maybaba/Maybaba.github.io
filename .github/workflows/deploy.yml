@@ -39,7 +39,7 @@ jobs:
     - name: Copy JavaScript project
       run: |
         cd JSProject
-         mkdir -p ${{ github.workspace }}/public/JSProject  # ../public/JSProject 디렉토리 생성
+        mkdir -p ${{ github.workspace }}/public/JSProject  # ../public/JSProject 디렉토리 생성
         cp -r ${{ github.workspace }}/JSProject/* ../public/JSProject/
 
     - name: Debug JSProject directory
@@ -103,8 +103,8 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GH_PAGES_TOKEN }}
-        publish_dir: ./public
-        publish_branch: gh-pages # gh-pages에서 빌드된 파일 배포 
+       github_token: ${{ secrets.GH_PAGES_TOKEN }}
+       publish_dir: ./public
+       publish_branch: gh-pages
 
 
