@@ -94,7 +94,7 @@ jobs:
 
     # 테스트 리포트를 아티팩트로 저장
     - name: Upload Test Report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: test-report
         path: workwave/build/reports/tests/test/  # 테스트 리포트 파일 경로
