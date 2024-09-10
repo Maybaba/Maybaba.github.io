@@ -26,7 +26,7 @@ jobs:
         npm install
         CI=false npm run build
         mkdir -p ../public/foodietree_FE/
-        cp -r build/* ../public/foodietree_FE/  # 빌드된 정적 파일을 실제 배포 될 장소 public 디렉토리로 복사
+        cp -r build/* ../public/foodietree_FE/ 
 
 
     # Checkout and build JavaScript project
@@ -38,9 +38,9 @@ jobs:
 
     - name: Copy JavaScript project
       run: |
-        cd JSProject
-        mkdir -p ${{ github.workspace }}/public/JSProject  # ../public/JSProject 디렉토리 생성
-        cp -r ${{ github.workspace }}/JSProject/* ../public/JSProject/
+        mkdir -p public/JSProject
+        cp -r JSProject/* public/JSProject/
+
 
     - name: Debug JSProject directory
       run: |
