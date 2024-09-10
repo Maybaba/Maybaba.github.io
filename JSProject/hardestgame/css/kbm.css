@@ -1,0 +1,750 @@
+/* reset css */
+@import url(https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css);
+
+
+* {
+  padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   text-align: center;
+}
+
+
+body {
+  width: 100%;
+    height: 600px;
+    background: white;
+    margin: 100px auto;
+    
+}
+
+.wrap {
+  width: 850px;
+  height: 600px;
+  margin: 100px auto;
+  background: #B4B5FE;
+  border: 1px solid #000;
+  margin-top: 7%;
+}
+
+.game {
+  width: 680px;
+  height: 400px;
+  margin: 100px auto;
+  background: #B4B5FE;
+  /* border: 1px solid #000; */
+  display: flex;
+  flex-wrap:wrap;
+  position: relative;  
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border: 5px solid #000;
+  z-index: 500;
+  position: absolute;
+  top: 48%;
+  left: 7.5%;
+}
+
+
+
+.avoidCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: blue;
+  border: 5px solid black;
+  z-index: 500;
+  position: absolute;
+}
+
+.backgroundInGame1 {
+  width: 40px;
+  height: 40px;
+  background: #f7f7ff;
+}
+
+.backgroundInGame2 {
+  width: 40px;
+  height: 40px;
+  background: #e6e6ff;
+}
+
+
+.eatCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffff00;
+  border: 5px solid black;
+  z-index: 990;
+  position: absolute;
+}
+
+.safeArea {
+  width: 40px;
+  height: 40px;
+  background: #b5feb4;
+  position: relative;
+}
+
+.white {
+  background: white;
+}
+
+/* 영역 확인할 때 사용 할 클래스 */
+.check { 
+  background: black;
+}
+
+.none {
+  position: relative;
+  background: #B4B5FE;
+  z-index: 100;
+}
+
+.topborder {
+  border-top: 5px solid #000;
+
+}
+.rightborder {
+  border-right: 5px solid #000;
+}
+
+.bottomborder {
+  border-bottom: 5px solid #000;
+}
+.leftborder {
+  border-left: 5px solid #000;
+}
+
+.e1 {
+  top: 50px;
+  left: 90px;
+}
+
+.e2 {
+  top: 90px;
+  left: 90px;
+}
+
+.e3 {
+  top: 130px;
+  left: 90px;
+}
+.e4 {
+  top: 170px;
+  left: 90px;
+}
+
+.e5 {
+  top: 210px;
+  left: 90px;
+}
+
+.e6 {
+  top: 250px;
+  left: 90px;
+}
+
+.e7 {
+  top: 290px;
+  left: 90px;
+}
+
+.e8 {
+  top: 330px;
+  left: 90px;
+}
+
+.e9 {
+  top: 50px;
+  left: 130px;
+}
+
+.e10 {
+  top: 90px;
+  left: 130px;
+}
+
+.e11 {
+  top: 130px;
+  left: 130px;
+}
+
+.e12 {
+  top: 170px;
+  left: 130px;
+}
+
+.e13 {
+  top: 210px;
+  left: 130px;
+}
+
+.e14 {
+  top: 250px;
+  left: 130px;
+}
+
+.e15 {
+  top: 290px;
+  left: 130px;
+}
+
+.e16 {
+  top: 330px;
+  left: 130px;
+}
+
+.e17 {
+  top: 50px;
+  left: 170px;
+}
+
+.e18 {
+  top: 90px;
+  left: 170px;
+}
+
+.e19 {
+  top: 130px;
+  left: 170px;
+}
+
+.e20 {
+  top: 170px;
+  left: 170px;
+}
+
+.e21 {
+  top: 210px;
+  left: 170px;
+}
+
+.e22 {
+  top: 250px;
+  left: 170px;
+}
+
+.e23 {
+  top: 290px;
+  left: 170px;
+}
+
+.e24 {
+  top: 330px;
+  left: 170px;
+}
+
+.e25 {
+  top: 50px;
+  left: 210px;
+}
+
+.e26 {
+  top: 90px;
+  left: 210px;
+}
+
+.e27 {
+  top: 130px;
+  left: 210px;
+}
+
+.e28 {
+  top: 170px;
+  left: 210px;
+}
+
+.e29 {
+  top: 210px;
+  left: 210px;
+}
+
+.e30 {
+  top: 250px;
+  left: 210px;
+}
+
+.e31 {
+  top: 290px;
+  left: 210px;
+}
+
+.e32 {
+  top: 330px;
+  left: 210px;
+}
+
+.e33 {
+  top: 50px;
+  left: 250px;
+}
+
+.e34 {
+  top: 90px;
+  left: 250px;
+}
+
+.e35 {
+  top: 130px;
+  left: 250px;
+}
+
+.e36 {
+  top: 170px;
+  left: 250px;
+}
+
+.e37 {
+  top: 210px;
+  left: 250px;
+}
+
+.e38 {
+  top: 250px;
+  left: 250px;
+}
+
+.e39 {
+  top: 290px;
+  left: 250px;
+}
+
+.e40 {
+  top: 330px;
+  left: 250px;
+}
+
+.e41 {
+  top: 50px;
+  left: 290px;
+}
+.e42 {
+  top: 90px;
+  left: 290px;
+}
+.e43 {
+  top: 130px;
+  left: 290px;
+}
+.e44 {
+  top: 170px;
+  left: 290px;
+}
+.e45 {
+  top: 210px;
+  left: 290px;
+}
+.e46 {
+  top: 250px;
+  left: 290px;
+}
+.e47 {
+  top: 290px;
+  left: 290px;
+}
+.e48 {
+  top: 330px;
+  left: 290px;
+}
+
+.e49 {
+  top: 50px;
+  left: 370px;
+}
+.e50 {
+  top: 90px;
+  left: 370px;
+}
+.e51 {
+  top: 130px;
+  left: 370px;
+}
+.e52 {
+  top: 170px;
+  left: 370px;
+}
+.e53 {
+  top: 210px;
+  left: 370px;
+}
+.e54 {
+  top: 250px;
+  left: 370px;
+}
+.e55 {
+  top: 290px;
+  left: 370px;
+}
+.e56 {
+  top: 330px;
+  left: 370px;
+}
+
+.e57 {
+  top: 50px;
+  left: 410px;
+}
+.e58 {
+  top: 90px;
+  left: 410px;
+}
+.e59 {
+  top: 130px;
+  left: 410px;
+}
+.e60 {
+  top: 170px;
+  left: 410px;
+}
+.e61 {
+  top: 210px;
+  left: 410px;
+}
+.e62 {
+  top: 250px;
+  left: 410px;
+}
+.e63 {
+  top: 290px;
+  left: 410px;
+}
+.e64 {
+  top: 330px;
+  left: 410px;
+}
+
+.e65 {
+  top: 50px;
+  left: 450px;
+}
+.e66 {
+  top: 90px;
+  left: 450px;
+}
+.e67 {
+  top: 130px;
+  left: 450px;
+}
+.e68 {
+  top: 170px;
+  left: 450px;
+}
+.e69 {
+  top: 210px;
+  left: 450px;
+}
+.e70 {
+  top: 250px;
+  left: 450px;
+}
+.e71 {
+  top: 290px;
+  left: 450px;
+}
+.e72 {
+  top: 330px;
+  left: 450px;
+}
+
+.e73 {
+  top: 50px;
+  left: 490px;
+}
+.e74 {
+  top: 90px;
+  left: 490px;
+}
+.e75 {
+  top: 130px;
+  left: 490px;
+}
+.e76 {
+  top: 170px;
+  left: 490px;
+}
+.e77 {
+  top: 210px;
+  left: 490px;
+}
+.e78 {
+  top: 250px;
+  left: 490px;
+}
+.e79 {
+  top: 290px;
+  left: 490px;
+}
+.e80 {
+  top: 330px;
+  left: 490px;
+}
+
+.e81 {
+  top: 50px;
+  left: 530px;
+}
+.e82 {
+  top: 90px;
+  left: 530px;
+}
+.e83 {
+  top: 130px;
+  left: 530px;
+}
+.e84 {
+  top: 170px;
+  left: 530px;
+}
+.e85 {
+  top: 210px;
+  left: 530px;
+}
+.e86 {
+  top: 250px;
+  left: 530px;
+}
+.e87 {
+  top: 290px;
+  left: 530px;
+}
+.e88 {
+  top: 330px;
+  left: 530px;
+}
+.e89 {
+  top: 50px;
+  left: 570px;
+}
+.e90 {
+  top: 90px;
+  left: 570px;
+}
+.e91 {
+  top: 130px;
+  left: 570px;
+}
+.e92 {
+  top: 170px;
+  left: 570px;
+}
+.e93 {
+  top: 210px;
+  left: 570px;
+}
+.e94 {
+  top: 250px;
+  left: 570px;
+}
+.e95 {
+  top:290px;
+  left: 570px;
+}
+.e96 {
+  top: 330px;
+  left: 570px;
+}
+
+
+
+
+
+#one {
+  top: 50px;
+  left: 90px;
+}
+#two {
+   top: 50px;
+  left: 170px;
+  
+}
+#three {
+  top: 50px;
+  left: 250px;
+  
+}
+#four {
+  top: 50px;
+  left: 370px;
+}
+
+#five {
+  top: 50px;
+  left: 450px;
+}
+#six {
+  top: 50px;
+  left: 530px;
+}
+#seven {
+  top: 330px;
+  left: 410px;
+}
+#eight {
+  top: 330px;
+  left: 490px;
+}
+#nine {
+  top: 330px;
+  left: 570px;
+}
+#ten {
+  top: 330px;
+  left: 130px;
+}
+#eleven {
+  top: 330px;
+  left: 210px;
+}
+#twelve {
+  top: 330px;
+  left: 290px;
+}
+
+.avoidCircle {
+  position: absolute;
+}
+
+.down{
+  animation: downmoveBox 1000ms linear infinite;
+}
+
+@keyframes downmoveBox {
+  0% {
+      transform: translateX(0) translateY(0); /* 초기 위치 */
+  }
+  50% {
+      transform: translateX(0) translateY(290px); /* 위로 이동 */
+  }
+  100% {
+      transform: translateX(0) translateY(0); /* 아래로 이동 */
+  }
+}
+
+.up{
+  animation: upmoveBox 1000ms linear infinite;
+}
+
+@keyframes upmoveBox {
+  0% {
+      transform: translateX(0) translateY(0); /* 초기 위치 */
+  }
+  50% {
+      transform: translateX(0) translateY(-290px); /* 위로 이동 */
+  }
+  100% {
+      transform: translateX(0) translateY(0); /* 아래로 이동 */
+  }
+}
+
+.clearZone {
+  width: 40px;
+  height: 40px;
+  background: #b5feb4;
+  position: relative;
+  z-index: 1;
+}
+
+body .countbox{
+  width: 350px;
+  height: 50px;
+  background: #000;
+  border: 1px solid #000;
+  position: absolute;
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+} 
+
+
+.wrap1 {
+  width: 850px;
+  height: 600px;
+  margin: 100px auto;
+  background: linear-gradient(to bottom, #B4B5FE, #ffffff);
+  border: 1px solid #000;
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+
+.black {
+  background: #000;
+  width: 100%;
+  height: 60px;
+  color: white;
+  display: flex;
+  /* font-size: 50px; */
+  justify-content: space-between;
+  align-items: center;
+  /* position: absolute;
+  top: 10.2%; */
+}
+.top {
+  position: absolute;
+  /* top: 10.2%; */
+  width: 848px;
+}
+.top .menu {
+  font-size: 40px;
+  padding-left: 10px;
+}
+
+.top .round {
+  font-size: 30px;
+  padding-left: 50px;
+  position: absolute;
+  right: 10px;
+  
+}
+.top .deaths {
+  font-size: 35px;
+  padding-right: 10px;
+  
+}
+.bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  bottom: 10.2%;
+}
+.bottom .more {
+  font-size: 30px;
+  padding-left: 10px;
+  
+}
+.bottom .land {
+  font-size: 35px;
+  padding-right: 10px;
+  
+}
+
+.main {
+  font-size: 50px;
+  font-weight: 900;
+  width: 90%;
+  margin: 0 auto;
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.try {
+  padding-top: 20px;
+}
+
+
+
+ 

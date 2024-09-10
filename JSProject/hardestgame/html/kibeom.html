@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The developement chronicle by kibeom</title>
+    <link rel="stylesheet" href="../css/kibeom.css" />
+    <link rel="shortcut icon" href="../../redboxonly.png" />
+    <!-- <link rel="stylesheet" href="../subPage.css"> -->
+
+   <script type="module" src="../js/app.js" defer></script>    
+
+  </head>
+  
+  <body>
+ 
+      <div class="wrap">
+        <div class="black top">
+          <div class="menu">MENU</div>
+          <div class="round">1/30</div>
+          <div class="deaths"></div>
+        </div>
+      
+      <div class="game">
+        <div id="redbox" class="box"></div>
+        <div class="avoidCircle" id="one"></div>
+        <div class="avoidCircle" id="two"></div>
+        <div class="avoidCircle" id="three"></div>
+        <div class="avoidCircle" id="four"></div>
+        <div class="avoidCircle" id="five"></div>
+        <div class="avoidCircle" id="six"></div>
+        <div class="avoidCircle" id="seven"></div>
+        <div class="avoidCircle" id="eight"></div>
+        <div class="avoidCircle" id="nine"></div>
+        <div class="avoidCircle" id="ten"></div>
+        <div class="avoidCircle" id="eleven"></div>
+        <div class="avoidCircle" id="twelve"></div>
+        <div class="avoidCircle" id="thirteen"></div>
+        <div class="avoidCircle" id="fourteen"></div>
+        <div class="avoidCircle" id="fifteen"></div>
+        <div class="avoidCircle" id="sixteen"></div>
+        <div class="avoidCircle" id="seventeen"></div>
+        <div class="avoidCircle" id="eighteen"></div>
+        <div class="avoidCircle" id="nineteen"></div>
+        <div class="avoidCircle" id="twenty"></div>
+        <div class="backgroundInGame1 white none"></div>
+        <div class="backgroundInGame2 gray none"></div>
+        <div class="backgroundInGame1 white none bottomborder"></div>
+        <div class="backgroundInGame2 gray none bottomborder "></div>
+        <div class="backgroundInGame1 white none bottomborder"></div>
+        <div class="backgroundInGame2 gray  none bottomborder"></div>
+        <div id="eatCircleFirst" class="eatCircle first"></div>
+        <div id="eatCircleSecond" class="eatCircle second"></div>
+        <div id="eatCircleThird" class="eatCircle third"></div>
+        <div id="eatCircleFourth" class="eatCircle fourth"></div>
+        <div class="backgroundInGame1 white none "></div>
+        <div class="backgroundInGame2 gray none "></div>
+        <div class="backgroundInGame1 white none "></div>
+        <div class="backgroundInGame2 gray  none bottomborder"></div>
+        <div class="backgroundInGame1 white none bottomborder"></div>
+        <div class="backgroundInGame2 gray none  bottomborder"></div>
+        <div class="backgroundInGame1 white none bottomborder"></div>
+        <div class="backgroundInGame2 gray none bottomborder"></div>
+        <div class="backgroundInGame1 white none bottomborder "></div>
+        <div class="backgroundInGame2 gray none "></div>
+        <div class="backgroundInGame1 white none"></div>
+        <div class="backgroundInGame2 gray none"></div>
+        <div class="backgroundInGame1 white none rightborder"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray none leftborder"></div>
+        <div class="backgroundInGame1 white none "></div>
+        <div class="backgroundInGame2 gray none rightborder"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white none leftborder"></div>
+        <div class="backgroundInGame2 gray none"></div>
+        <div class="backgroundInGame1 white none "></div>
+        <div class="backgroundInGame2 gray none rightborder"></div>
+        <div class="backgroundInGame1 white   "></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white none  leftborder"></div>
+        <div class="backgroundInGame2 gray none"></div>
+        <div class="backgroundInGame1 white  none  rightborder"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray none  leftborder"></div>
+        <div class="backgroundInGame1 white none "></div>
+        <div class="safeArea none "></div>
+        <div class="backgroundInGame1 none bottomborder rightborder"></div>
+        <div class="backgroundInGame2 "></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray none leftborder"></div>
+        <div class="backgroundInGame1 white none"></div>
+        <div class="backgroundInGame2 gray none rightborder"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 none bottomborder leftborder "></div>
+        <div class="safeArea none "></div>
+        <div class="safeArea none rightborder"></div>
+
+        <div class="safeArea start"></div>
+        <div class="backgroundInGame1"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white none bottomborder leftborder"></div>
+        <div class="backgroundInGame2 gray none bottomborder "></div>
+        <div class="backgroundInGame1 white none rightborder bottomborder"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="clearZone"></div>
+        <div class="safeArea none leftborder"></div>
+        <div class="safeArea none rightborder "></div>
+        <div class="safeArea"></div>
+        <div class="backgroundInGame2"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="clearZone"></div>
+        <div class="safeArea none leftborder"></div>
+        <div class="safeArea none "></div>
+        <div class="backgroundInGame2 none topborder rightborder"></div>
+        <div class="backgroundInGame1 "></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray none topborder leftborder"></div>
+        <div class="backgroundInGame1 white none topborder rightborder"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 none topborder leftborder"></div>
+        <div class="safeArea  none "></div>
+        <div class="backgroundInGame2 gray none "></div>
+        <div class="backgroundInGame1 white none  rightborder "></div>
+        <div class="backgroundInGame2 gray  "></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white none leftborder"></div>
+        <div class="backgroundInGame2 gray none rightborder "></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white none leftborder "></div>
+        <div class="backgroundInGame2 gray none  "></div>
+        <div class="backgroundInGame1 white none"></div>
+        <div class="backgroundInGame2 gray none rightborder"></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray none leftborder"></div>
+        <div class="backgroundInGame1 white none rightborder"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray none leftborder"></div>
+        <div class="backgroundInGame1 white none"></div>
+        <div class="backgroundInGame2 gray none"></div>
+        <div class="backgroundInGame1 white none"></div>
+        <div class="backgroundInGame2 gray none topborder"></div>
+        <div class="backgroundInGame1 white  none topborder"></div>
+        <div class="backgroundInGame2 gray none topborder "></div>
+        <div class="backgroundInGame1 white none topborder"></div>
+        <div class="backgroundInGame2 gray none topborder"></div>
+        <div class="backgroundInGame1 white none topborder "></div>
+        <div class="backgroundInGame2 gray none topborder"></div>
+        <div class="backgroundInGame1 white  none"></div>
+        <div class="backgroundInGame2 gray none"></div>
+        <div class="backgroundInGame1 white none topborder"></div>
+        <div class="backgroundInGame2 gray  none topborder"></div>
+        <div class="backgroundInGame1 white none topborder"></div>
+        <div class="backgroundInGame2 gray none topborder"></div>
+        <div class="backgroundInGame1 white none "></div>
+        <div class="backgroundInGame2 gray none"></div>
+      </div>
+      <div class="black bottom">
+        <div class="more">PLAY MORE GAMES</div>
+        <div class="land">SNUBBY LAND</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const $hiddenClear = document.querySelector('.land');
+    function hiddenClear() {
+      window.location.href = "./subPage.html";
+    }
+    $hiddenClear.addEventListener('click', hiddenClear);
+  </script>
+</html>

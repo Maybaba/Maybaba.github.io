@@ -1,0 +1,74 @@
+/* reset css */
+@import url(https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+    height: 800px;
+    background: white;
+    margin: 100px auto
+}
+.wrap {
+  width: 850px;
+  height: 600px;
+  margin: 100px auto;
+  background: linear-gradient(to bottom, #B4B5FE, #ffffff);
+  border: 1px solid #000;
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.black {
+  background: #000;
+  width: 100%;
+  height: 60px;
+  color: white;
+  display: flex;
+  /* font-size: 50px; */
+  justify-content: space-between;
+  align-items: center;
+}
+.top .menu {
+  font-size: 40px;
+  padding-left: 10px;
+  /* width: 33%; */
+}
+.top .round {
+  font-size: 30px;
+  padding-right: 1dvh;
+  /* width: 33%; */
+}
+/* .top .deaths {
+  font-size: 35px;
+  padding-right: 10px;
+  width: 33%;
+} */
+.bottom .more {
+  font-size: 30px;
+  padding-left: 10px;
+}
+.bottom .land {
+  font-size: 35px;
+  padding-right: 10px;
+}
+
+.main {
+  font-size: 50px;
+  font-weight: 900;
+  width: 90%;
+  margin: 0 auto;
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.try {
+  padding-top: 20px;
+}

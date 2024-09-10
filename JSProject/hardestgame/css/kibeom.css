@@ -1,0 +1,356 @@
+/* reset css */
+@import url(https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css);
+
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+
+  }
+
+
+body {
+  width: 100%;
+    height: 600px;
+    background: white;
+    margin: 100px auto;
+    
+}
+.wrap {
+  width: 850px;
+  height: 600px;
+  margin: 100px auto;
+  background: #B4B5FE;
+  border: 1px solid #000;
+  margin-top: 7%;
+ 
+
+}
+.game {
+  width: 680px;
+  height: 400px;
+  margin: 100px auto;
+  background: #B4B5FE;
+  /* border: 1px solid #000; */
+  display: flex;
+  flex-wrap:wrap;
+  position: relative;
+  
+}
+.box {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border: 5px solid #000;
+  z-index: 500;
+  position: absolute;
+  top: 48%;
+  left: 7.5%;
+  transition: 80ms linear;
+}
+.startArea {
+  top: 48%;
+  left: 7.5%;
+}
+
+
+.avoidCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: blue;
+  border: 5px solid black;
+  z-index: 99999;
+  position: absolute;
+}
+.backgroundInGame1 {
+  width: 40px;
+  height: 40px;
+  background: #f7f7ff;
+}
+.backgroundInGame2 {
+  width: 40px;
+  height: 40px;
+  background: #e6e6ff;
+}
+
+
+.eatCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffff00;
+  border: 5px solid black;
+  z-index: 990;
+  position: absolute;
+}
+
+.safeArea {
+  width: 40px;
+  height: 40px;
+  background: #b5feb4;
+  position: relative;
+}
+
+.white {
+  background: white;
+}
+
+/* 영역 확인할 때 사용 할 클래스 */
+.check { 
+  background: black;
+}
+
+.none {
+  position: relative;
+  background: #B4B5FE;
+  z-index: 100;
+}
+
+.topborder {
+  border-top: 5px solid #000;
+
+}
+.rightborder {
+  border-right: 5px solid #000;
+}
+
+.bottomborder {
+  border-bottom: 5px solid #000;
+  
+}
+.leftborder {
+  border-left: 5px solid #000;
+}
+
+.first {
+  left: 210px;
+  top: 50px;
+}
+
+.second {
+  top: 50px;
+  left: 368px;
+}
+
+.third {
+  top: 329px;
+  right: 330px;
+}
+.fourth {
+  top: 329px;
+  right: 212px;
+}
+
+
+#one {
+  top: 90px;
+  left: 130px;
+}
+#two {
+   top: 90px;
+  left: 208px;
+}
+#three {
+  top: 90px;
+  left: 410px;
+  
+}
+#four {
+  top: 90px;
+  left: 488px;
+}
+
+#five {
+  top: 90px;
+  left: 568px;
+}
+#six {
+  top: 170px;
+  left: 130px;
+}
+#seven {
+  top: 170px;
+  left: 410px;
+}
+#eight {
+  top: 170px;
+  left: 488px;
+}
+#nine {
+  top: 170px;
+  left: 566px;
+}
+#ten {
+  top: 170px;
+  left: 208px;
+}
+#eleven {
+  left: 130px;
+  top: 250px;
+}
+#twelve {
+  top: 250px;
+  left: 208px;
+}
+#thirteen {
+  top: 250px;
+  left: 290px;
+}
+#fourteen {
+  top: 250px;
+  left: 488px;
+}
+#fifteen {
+  top: 250px;
+  left: 566px;
+}
+#sixteen {
+  top: 330px;
+  left: 130px;
+}
+#seventeen {
+  top: 330px;
+  left: 208px;
+}
+#eighteen {
+  top: 330px;
+  left: 290px;
+}
+#nineteen {
+  top: 330px;
+  left: 488px;
+}
+#twenty {
+  top: 330px;
+  left: 566px;
+}
+.avoidCircle {
+  position: absolute;
+  animation: moveBox 2500ms linear infinite;
+}
+@keyframes moveBox {
+  0% {
+      transform: translateX(0) translateY(0); /* 초기 위치 */
+  }
+  25% {
+      transform: translateX(-40px) translateY(0); 
+  }
+  50% {
+      transform: translateX(-40px) translateY(-40px); /* 위로 이동 */
+  }
+  75% {
+      transform: translateX(0) translateY(-40px); /* 오른쪽으로 이동 */
+  }
+  100% {
+      transform: translateX(0) translateY(0); /* 아래로 이동 */
+  }
+}
+.clearZone {
+  width: 40px;
+  height: 40px;
+  background: #b5feb4;
+  position: relative;
+  z-index: 1;
+}
+
+body .countbox{
+  width: 350px;
+  height: 50px;
+  background: #000;
+  border: 1px solid #000;
+  position: absolute;
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+} 
+
+
+.wrap1 {
+  width: 850px;
+  height: 600px;
+  margin: 100px auto;
+  background: linear-gradient(to bottom, #B4B5FE, #ffffff);
+  border: 1px solid #000;
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+
+.black {
+  background: #000;
+  width: 100%;
+  height: 60px;
+  color: white;
+  display: flex;
+  /* font-size: 50px; */
+  justify-content: space-between;
+  align-items: center;
+  /* position: absolute;
+  top: 10.2%; */
+}
+.top {
+  position: absolute;
+  /* top: 10.2%; */
+  width: 848px;
+}
+.top .menu {
+  font-size: 40px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.top .round {
+  font-size: 30px;
+  padding-left: 50px;
+  position: absolute;
+  right: 10px;
+  
+}
+/* .top .deaths {
+  font-size: 35px;
+  padding-right: 10px;
+} */
+.bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  bottom: 10.2%;
+}
+.bottom .more {
+  font-size: 30px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.bottom .land {
+  font-size: 35px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.main {
+  font-size: 50px;
+  font-weight: 900;
+  width: 90%;
+  margin: 0 auto;
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.try {
+  padding-top: 20px;
+}
+
+
+
+ 

@@ -1,0 +1,171 @@
+/* Import */
+@import url(test_Main.css);
+@import url(https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+  text-align: center;
+  /* cursor: url(); */
+}
+
+/* Body */
+body {
+  height: 800px;
+  width: 850px;
+  margin: 7% auto;
+}
+
+/* Wrap */
+.wrap {
+  height: 600px;
+  width: 850px;
+  margin: 100px auto;
+  border: 0.1px solid #b4b5fe;
+  background: linear-gradient(to top, #b4b5fe, #b5feb4);
+  position: relative;
+}
+
+/* Default line */
+.default-line {
+  height: 50px;
+  width: 100%;
+  background: #000;
+}
+
+/* Contents */
+div.contents {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* Titles */
+div.contents .titles {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 100px;
+  display: flex;
+  flex-flow: column;
+  text-shadow: 3px 3px 3px gray;
+}
+.titles #the {
+  color: black;
+  font-size: 50px;
+}
+.titles #developement {
+  letter-spacing: -10px;
+  line-height: 120px;
+  font-size: 90px;
+}
+.titles #chronicle {
+  color: black;
+  font-size: 70px;
+}
+
+/* Link to */
+.link-to {
+  width: 80%;
+  height: 100px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-to button {
+  width: 200px;
+  height: 50px;
+  margin-top: 5px;
+  border: none;
+  background: none;
+  z-index: 9;
+}
+.link-to a {
+  color: #000;
+  text-decoration: none;
+  font-size: 60px;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+}
+.link-to .a-exit {
+  margin: 20px auto;
+}
+
+/* Rainbow animation */
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  16% {
+    color: orange;
+  }
+  33% {
+    color: yellow;
+  }
+  50% {
+    color: green;
+  }
+  66% {
+    color: blue;
+  }
+  83% {
+    color: indigo;
+  }
+  100% {
+    color: violet;
+  }
+}
+
+/* Play Game & Exit hover */
+#playGame .a-playGame:hover,
+#exit .a-exit:hover {
+  animation: rainbow 1.3s infinite;
+}
+
+/* Easter egg */
+.easter-EGG {
+  color: white;
+  font-weight: 900;
+}
+
+/* Redbox hover */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(150deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.redbox-anime {
+  position: absolute;
+  width: 80%;
+  height: 100px;
+  margin: -170px 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.redbox-hover {
+  animation: spin 0.7s infinite;
+  background-color: red;
+  border: 5px solid #000;
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
+}
+
+/* Opacity transition */
+.redbox-anime .first,
+.redbox-anime .second {
+  opacity: 0;
+}

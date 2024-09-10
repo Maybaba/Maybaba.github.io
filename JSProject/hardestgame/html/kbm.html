@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The developement chronicle by byengmo</title>
+    <link rel="shortcut icon" href="../../redboxonly.png" />
+    <link rel="stylesheet" href="../css/kbm.css" />
+    <!-- <link rel="stylesheet" href="../subPage.css"> -->
+   
+
+    <script type="module" src="../js/app.js" defer></script>
+    <script type="module" src="../js/kbmToSub2.js" defer></script>
+    <!-- <script type="module" src="../js/moveInside.js" defer></script> -->
+
+  </head>
+  
+  <body>
+ 
+      <div class="wrap">
+        <div class="black top">
+          <div class="menu">MENU</div>
+          <div class="round">2/30</div>
+          <div class="deaths"></div>
+        </div>
+      
+      <div class="game">
+        <div id="redbox" class="box"></div>
+        <div class="avoidCircle down" id="one"></div>
+        <div class="avoidCircle down" id="two"></div>
+        <div class="avoidCircle down" id="three"></div>
+        <div class="avoidCircle down" id="four"></div>
+        <div class="avoidCircle down" id="five"></div>
+        <div class="avoidCircle down" id="six"></div>
+        <div class="avoidCircle up" id="seven"></div>
+        <div class="avoidCircle up" id="eight"></div>
+        <div class="avoidCircle up" id="nine"></div>
+        <div class="avoidCircle up" id="ten"></div>
+        <div class="avoidCircle up" id="eleven"></div>
+        <div class="avoidCircle up" id="twelve"></div>
+
+        <div class="backgroundInGame1 white none"></div>
+        <div class="backgroundInGame2 gray none"></div>
+        <div class="backgroundInGame1 white none bottomborder"></div>
+        <div class="backgroundInGame2 gray none bottomborder "></div>
+        <div class="backgroundInGame1 white none bottomborder"></div>
+        <div class="backgroundInGame2 gray  none bottomborder"></div>
+        <div id="eatCircleFirst" class="eatCircle e1"></div>
+        <div id="eatCircleSecond" class="eatCircle e2"></div>
+        <div id="eatCircleThird" class="eatCircle e3"></div>
+        <div id="eatCircleFourth" class="eatCircle e4"></div>
+        <div id="eatCircleFourth" class="eatCircle e5"></div>
+        <div id="eatCircleFourth" class="eatCircle e6"></div>
+        <div id="eatCircleFourth" class="eatCircle e7"></div>
+        <div id="eatCircleFourth" class="eatCircle e8"></div>
+        <div id="eatCircleFourth" class="eatCircle e9"></div>
+        <div id="eatCircleFourth" class="eatCircle e10"></div>
+        <div id="eatCircleFourth" class="eatCircle e11"></div>
+        <div id="eatCircleFourth" class="eatCircle e12"></div>
+        <div id="eatCircleFourth" class="eatCircle e13"></div>
+        <div id="eatCircleFourth" class="eatCircle e14"></div>
+        <div id="eatCircleFourth" class="eatCircle e15"></div>
+        <div id="eatCircleFourth" class="eatCircle e16"></div>
+        <div id="eatCircleFourth" class="eatCircle e17"></div>
+        <div id="eatCircleFourth" class="eatCircle e18"></div>
+        <div id="eatCircleFourth" class="eatCircle e19"></div>
+        <div id="eatCircleFourth" class="eatCircle e20"></div>
+        <div id="eatCircleFourth" class="eatCircle e21"></div>
+        <div id="eatCircleFourth" class="eatCircle e22"></div>
+        <div id="eatCircleFourth" class="eatCircle e23"></div>
+        <div id="eatCircleFourth" class="eatCircle e24"></div>
+        <div id="eatCircleFourth" class="eatCircle e25"></div>
+        <div id="eatCircleFourth" class="eatCircle e26"></div>
+        <div id="eatCircleFourth" class="eatCircle e27"></div>
+        <div id="eatCircleFourth" class="eatCircle e28"></div>
+        <div id="eatCircleFourth" class="eatCircle e29"></div>
+        <div id="eatCircleFourth" class="eatCircle e30"></div>
+        <div id="eatCircleFourth" class="eatCircle e31"></div>
+        <div id="eatCircleFourth" class="eatCircle e32"></div>
+        <div id="eatCircleFourth" class="eatCircle e33"></div>
+        <div id="eatCircleFourth" class="eatCircle e34"></div>
+        <div id="eatCircleFourth" class="eatCircle e35"></div>
+        <div id="eatCircleFourth" class="eatCircle e36"></div>
+        <div id="eatCircleFourth" class="eatCircle e37"></div>
+        <div id="eatCircleFourth" class="eatCircle e38"></div>
+        <div id="eatCircleFourth" class="eatCircle e39"></div>
+        <div id="eatCircleFourth" class="eatCircle e40"></div>
+        <div id="eatCircleFourth" class="eatCircle e41"></div>
+        <div id="eatCircleFourth" class="eatCircle e42"></div>
+        <div id="eatCircleFourth" class="eatCircle e43"></div>
+        <div id="eatCircleFourth" class="eatCircle e44"></div>
+        <div id="eatCircleFourth" class="eatCircle e45"></div>
+        <div id="eatCircleFourth" class="eatCircle e46"></div>
+        <div id="eatCircleFourth" class="eatCircle e47"></div>
+        <div id="eatCircleFourth" class="eatCircle e48"></div>
+        <div id="eatCircleFourth" class="eatCircle e49"></div>
+        <div id="eatCircleFourth" class="eatCircle e50"></div>
+        <div id="eatCircleFourth" class="eatCircle e51"></div>
+        <div id="eatCircleFourth" class="eatCircle e52"></div>
+        <div id="eatCircleFourth" class="eatCircle e53"></div>
+        <div id="eatCircleFourth" class="eatCircle e54"></div>
+        <div id="eatCircleFourth" class="eatCircle e55"></div>
+        <div id="eatCircleFourth" class="eatCircle e56"></div>
+        <div id="eatCircleFourth" class="eatCircle e57"></div>
+        <div id="eatCircleFourth" class="eatCircle e58"></div>
+        <div id="eatCircleFourth" class="eatCircle e59"></div>
+        <div id="eatCircleFourth" class="eatCircle e60"></div>
+        <div id="eatCircleFourth" class="eatCircle e61"></div>
+        <div id="eatCircleFourth" class="eatCircle e62"></div>
+        <div id="eatCircleFourth" class="eatCircle e63"></div>
+        <div id="eatCircleFourth" class="eatCircle e64"></div>
+        <div id="eatCircleFourth" class="eatCircle e65"></div>
+        <div id="eatCircleFourth" class="eatCircle e66"></div>
+        <div id="eatCircleFourth" class="eatCircle e67"></div>
+        <div id="eatCircleFourth" class="eatCircle e68"></div>
+        <div id="eatCircleFourth" class="eatCircle e69"></div>
+        <div id="eatCircleFourth" class="eatCircle e70"></div>
+        <div id="eatCircleFourth" class="eatCircle e71"></div>
+        <div id="eatCircleFourth" class="eatCircle e72"></div>
+        <div id="eatCircleFourth" class="eatCircle e73"></div>
+        <div id="eatCircleFourth" class="eatCircle e74"></div>
+        <div id="eatCircleFourth" class="eatCircle e75"></div>
+        <div id="eatCircleFourth" class="eatCircle e76"></div>
+        <div id="eatCircleFourth" class="eatCircle e77"></div>
+        <div id="eatCircleFourth" class="eatCircle e78"></div>
+        <div id="eatCircleFourth" class="eatCircle e79"></div>
+        <div id="eatCircleFourth" class="eatCircle e80"></div>
+        <div id="eatCircleFourth" class="eatCircle e81"></div>
+        <div id="eatCircleFourth" class="eatCircle e82"></div>
+        <div id="eatCircleFourth" class="eatCircle e83"></div>
+        <div id="eatCircleFourth" class="eatCircle e84"></div>
+        <div id="eatCircleFourth" class="eatCircle e85"></div>
+        <div id="eatCircleFourth" class="eatCircle e86"></div>
+        <div id="eatCircleFourth" class="eatCircle e87"></div>
+        <div id="eatCircleFourth" class="eatCircle e88"></div>
+        <div id="eatCircleFourth" class="eatCircle e89"></div>
+        <div id="eatCircleFourth" class="eatCircle e90"></div>
+        <div id="eatCircleFourth" class="eatCircle e91"></div>
+        <div id="eatCircleFourth" class="eatCircle e92"></div>
+        <div id="eatCircleFourth" class="eatCircle e93"></div>
+        <div id="eatCircleFourth" class="eatCircle e94"></div>
+        <div id="eatCircleFourth" class="eatCircle e95"></div>
+        <div id="eatCircleFourth" class="eatCircle e96"></div>
+        <div class="backgroundInGame1 none bottomborder"></div>
+        <div class="backgroundInGame2 none bottomborder"></div>
+        <div class="backgroundInGame1 none "></div>
+        <div class="backgroundInGame2  none bottomborder"></div>
+        <div class="backgroundInGame1 none bottomborder"></div>
+        <div class="backgroundInGame2 none  bottomborder"></div>
+        <div class="backgroundInGame1 none bottomborder"></div>
+        <div class="backgroundInGame2 none bottomborder"></div>
+        <div class="backgroundInGame1 none bottomborder "></div>
+        <div class="backgroundInGame2 none "></div>
+        <div class="backgroundInGame1 none"></div>
+        <div class="backgroundInGame2 none"></div>
+        <div class="backgroundInGame1 none rightborder"></div>
+        <div class="backgroundInGame2 "></div>
+        <div class="backgroundInGame1 "></div>
+        <div class="backgroundInGame2"></div>
+        <div class="backgroundInGame1 "></div>
+        <div class="backgroundInGame2"></div>
+        <div class="backgroundInGame1 "></div>
+        <div class="backgroundInGame2 none leftborder rightborder"></div>
+        <div class="backgroundInGame1"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white none leftborder"></div>
+        <div class="backgroundInGame2 gray none"></div>
+        <div class="backgroundInGame1 white none "></div>
+        <div class="backgroundInGame2 gray none rightborder"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1"></div>
+        <div class="backgroundInGame2"></div>
+        <div class="backgroundInGame1 white  none leftborder rightborder"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray none  leftborder"></div>
+        <div class="backgroundInGame1 white none "></div>
+        <div class="safeArea  none "></div>
+        <div class="backgroundInGame1 none bottomborder rightborder"></div>
+        <div class="backgroundInGame2 "></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2"></div>
+        <div class="backgroundInGame1"></div>
+        <div class="backgroundInGame2 gray none leftborder rightborder bottomborder"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 none bottomborder leftborder "></div>
+        <div class="safeArea none "></div>
+        <div class="safeArea none rightborder"></div>
+        <div class="safeArea start"></div>
+        <div class="backgroundInGame1"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1"></div>
+        <div class="backgroundInGame2 "></div>
+        <div class="backgroundInGame1"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="clearZone"></div>
+        <div class="safeArea none leftborder"></div>
+        <div class="safeArea none rightborder "></div>
+        <div class="safeArea"></div>
+        <div class="backgroundInGame2"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="clearZone"></div>
+        <div class="safeArea none leftborder"></div>
+        <div class="safeArea none "></div>
+        <div class="backgroundInGame2 none topborder rightborder"></div>
+        <div class="backgroundInGame1 "></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 none leftborder rightborder topborder"></div>
+        <div class="backgroundInGame2"></div>
+        <div class="backgroundInGame1"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 none topborder leftborder"></div>
+        <div class="safeArea  none "></div>
+        <div class="backgroundInGame2 gray none "></div>
+        <div class="backgroundInGame1 white none  rightborder "></div>
+        <div class="backgroundInGame2 gray  "></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 none leftborder rightborder"></div>
+        <div class="backgroundInGame1"></div>
+        <div class="backgroundInGame2 "></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white none leftborder "></div>
+        <div class="backgroundInGame2 gray none  "></div>
+        <div class="backgroundInGame1 white none"></div>
+        <div class="backgroundInGame2 gray none rightborder"></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white"></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 none leftborder rightborder"></div>
+        <div class="backgroundInGame2"></div>
+        <div class="backgroundInGame1"></div>
+        <div class="backgroundInGame2 gray "></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray"></div>
+        <div class="backgroundInGame1 white "></div>
+        <div class="backgroundInGame2 gray none leftborder"></div>
+        <div class="backgroundInGame1 white none"></div>
+        <div class="backgroundInGame2 gray none"></div>
+        <div class="backgroundInGame1 white none"></div>
+        <div class="backgroundInGame2 gray none topborder"></div>
+        <div class="backgroundInGame1 white  none topborder"></div>
+        <div class="backgroundInGame2 gray none topborder "></div>
+        <div class="backgroundInGame1 white none topborder"></div>
+        <div class="backgroundInGame2 gray none topborder"></div>
+        <div class="backgroundInGame1 white none topborder "></div>
+        <div class="backgroundInGame2 none"></div>
+        <div class="backgroundInGame1 white  none topborder"></div>
+        <div class="backgroundInGame2 gray none topborder"></div>
+        <div class="backgroundInGame1 white none topborder"></div>
+        <div class="backgroundInGame2 gray  none topborder"></div>
+        <div class="backgroundInGame1 white none topborder"></div>
+        <div class="backgroundInGame2 gray none topborder"></div>
+        <div class="backgroundInGame1 white none "></div>
+        <div class="backgroundInGame2 gray none"></div>
+      </div>
+      <div class="black bottom">
+        <div class="more">PLAY MORE GAMES</div>
+        <div class="land">SNUBBY LAND</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const $hiddenClear = document.querySelector('.land');
+    function nextLevel() {
+  window.location.href = "http://127.0.0.1:5500/hardestgame/html/subPage2.html";
+}
+
+$hiddenClear.addEventListener('click', nextLevel);
+
+  </script>
+</html>

@@ -1,0 +1,71 @@
+/* reset css */
+@import url(https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css);
+
+
+body {
+  width: 100%;
+    height: 800px;
+    background: white;
+    margin: 100px auto
+}
+.wrap {
+  width: 850px;
+  height: 600px;
+  margin: 100px auto;
+  background: #B4B5FE;
+  border: 1px solid #000;
+  margin-top: 7%;
+
+}
+.game {
+  width: 700px;
+  height: 400px;
+  margin: 100px auto;
+  /* background: yellow; */
+  border: 1px solid #000;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border: 5px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+}
+.avoidCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: blue;
+  border: 5px solid black;
+}
+.backgroundInGame1 {
+  width: 40px;
+  height: 40px;
+  background: #e6e6ff;
+}
+.backgroundInGame2 {
+  width: 40px;
+  height: 40px;
+  background: #34343a;
+}
+
+.eatCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffff00;
+  border: 5px solid black;
+}
+
+.safeArea {
+  width: 20px;
+  height: 20px;
+  background: #b5feb4;
+}
+
+
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The developement chronicle by yunjong</title>
+  <script type="module" src="../js/app.js" defer></script>
+  <link rel="shortcut icon" href="../../redboxonly.png" />
+  <link rel="stylesheet" href="../css/yunjong.css">
+</head>
+  <body>
+    <div class="wrap">
+      <div class="black top">
+        <div class="menu">MENU</div>
+        <div class="round">3/30</div>
+        <div class="deaths"></div>
+      </div>
+      <div class="game">
+        <div id="character" class="box number">box</div>
+
+          <div class="avoidCircle number" id="avoid-1"></div>
+          <div class="avoidCircle number" id="avoid-2"></div>
+          <div class="avoidCircle number" id="avoid-3"></div>
+          <div class="avoidCircle number" id="avoid-4"></div>
+          <div class="avoidCircle number" id="avoid-5"></div>
+          <div class="avoidCircle number" id="avoid-6"></div>
+          <div class="avoidCircle number" id="avoid-7"></div>
+
+          <!-- <div class="avoidTriangleParent triangleAnimation">
+            <div class="avoidTriangle number" id="avoid-8">8</div>
+            <div class="avoidTriangle number" id="avoid-9">9</div>
+            <div class="avoidTriangle number" id="avoid-10">10</div>
+          </div> -->
+
+          <div class="eatCircle number" id="eat-1">1</div>
+          <div class="eatCircle number" id="eat-2">2</div>
+          <div class="eatCircle number" id="eat-3">3</div>
+          <div class="eatCircle number" id="eat-4">4</div>
+          <div class="eatCircle number" id="eat-5">5</div>
+        
+
+        <div class="backgroundInGame1 delete">1</div>
+        <div class="backgroundInGame2 delete">2</div>
+        <div class="backgroundInGame1 delete">3</div>
+        <div class="backgroundInGame2 delete">4</div>
+        <div class="backgroundInGame1 delete">5</div>
+        <div class="backgroundInGame2 delete">6</div>
+        <div class="backgroundInGame1 delete">7</div>
+        <div class="backgroundInGame1 delete">8</div>
+        <div class="backgroundInGame2 delete">9</div>
+        <div class="backgroundInGame2 delete">10</div>
+        <div class="backgroundInGame1 delete">11</div>
+        <div class="backgroundInGame2 delete">12</div>
+        <div class="backgroundInGame1 delete">13</div>
+        <div class="backgroundInGame2 delete">14</div>
+        <div class="backgroundInGame1 delete">15</div>
+        <div class="backgroundInGame2 delete">16</div>
+        <div class="backgroundInGame1 delete">17</div>
+        <div class="backgroundInGame2 delete">18</div>
+        <div class="backgroundInGame1 delete bottomLine">19</div>
+        <div class="backgroundInGame2 delete bottomLine">20</div>
+        <div class="backgroundInGame1 delete bottomLine">21</div>
+        <div class="backgroundInGame2 delete">22</div>
+        <div class="backgroundInGame1 delete">23</div>
+        <div class="backgroundInGame2 delete">24</div>
+        <div class="backgroundInGame1 delete">25</div>
+        <div class="backgroundInGame2 delete">26</div>
+        <div class="backgroundInGame1 delete">27</div>
+        <div class="backgroundInGame2 delete">28</div>
+        <div class="backgroundInGame1 delete">29</div>
+        <div class="backgroundInGame2 delete bottomLine">30</div> 
+        <div class="backgroundInGame1 delete bottomLine">31</div>
+        <div class="backgroundInGame2 delete bottomLine">32</div>
+        <div class="backgroundInGame1 delete bottomLine">33</div>
+        <div class="backgroundInGame2 delete">34</div>
+        <div class="backgroundInGame1 delete rightLine">35</div>
+        <div class="backgroundInGame2 safeArea">36</div>
+        <div class="backgroundInGame1 safeArea start">37</div>
+        <div class="backgroundInGame2 safeArea">38</div>
+        <div class="backgroundInGame1 delete leftLine">39</div>
+        <div class="backgroundInGame2 delete">40</div>
+        <div class="backgroundInGame1 delete">41</div>
+        <div class="backgroundInGame2 delete">2</div>
+        <div class="backgroundInGame1 delete">3</div>
+        <div class="backgroundInGame2 delete">4</div>
+        <div class="backgroundInGame1 delete">5</div>
+        <div class="backgroundInGame2 delete bottomLine rightLine">6</div>
+        <div class="backgroundInGame1 ">7</div>
+        <div class="backgroundInGame2 ">8</div>
+        <div class="backgroundInGame1 clearZone">9</div>
+        <div class="backgroundInGame2 clearZone">50</div>
+        <div class="backgroundInGame1 delete leftLine">51</div>
+        <div class="backgroundInGame2 delete rightLine">52</div>
+        <div class="backgroundInGame1 safeArea">53</div>
+        <div class="backgroundInGame2 safeArea">54</div>
+        <div class="backgroundInGame1 safeArea">5</div>
+        <div class="backgroundInGame2 delete bottomLine leftLine">6</div>
+        <div class="backgroundInGame1 delete bottomLine">7</div>
+        <div class="backgroundInGame2 delete bottomLine">8</div>
+        <div class="backgroundInGame1 delete bottomLine">9</div>
+        <div class="backgroundInGame2 delete bottomLine">60</div>
+        <div class="backgroundInGame1 delete">61</div>
+        <div class="backgroundInGame2 delete bottomLine rightLine">2</div>
+        <div class="backgroundInGame1">3</div>
+        <div class="backgroundInGame2">4</div>
+        <div class="backgroundInGame1">5</div>
+        <div class="backgroundInGame2 clearZone">6</div> 
+        <div class="backgroundInGame1 clearZone">7</div>
+        <div class="backgroundInGame2 delete leftLine">8</div>
+        <div class="backgroundInGame1 delete rightLine">9</div>
+        <div class="backgroundInGame2">70</div>
+        <div class="backgroundInGame1">71</div>
+        <div class="backgroundInGame2">2</div>
+        <div class="backgroundInGame1">3</div>
+        <div class="backgroundInGame2">4</div>
+        <div class="backgroundInGame1">5</div>
+        <div class="backgroundInGame2">6</div>
+        <div class="backgroundInGame1">7</div>
+        <div class="backgroundInGame2 delete bottomLine leftLine rightLine">8</div>
+        <div class="backgroundInGame1">9</div>
+        <div class="backgroundInGame2">80</div>
+        <div class="backgroundInGame1">1</div>
+        <div class="backgroundInGame2">2</div>
+        <div class="backgroundInGame1">3</div>
+        <div class="backgroundInGame2">4</div>
+        <div class="backgroundInGame1 delete leftLine">5</div>
+        <div class="backgroundInGame2 delete rightLine">6</div>
+        <div class="backgroundInGame1">7</div>
+        <div class="backgroundInGame2">8</div>
+        <div class="backgroundInGame1">9</div>
+        <div class="backgroundInGame2">90</div>
+        <div class="backgroundInGame1">1</div>
+        <div class="backgroundInGame2">2</div>
+        <div class="backgroundInGame1">3</div>
+        <div class="backgroundInGame2">4</div>
+        <div class="backgroundInGame1">5</div>
+        <div class="backgroundInGame2">6</div>
+        <div class="backgroundInGame1">7</div>
+        <div class="backgroundInGame2">8</div>
+        <div class="backgroundInGame1">9</div>
+        <div class="backgroundInGame2">100</div>
+        <div class="backgroundInGame1">101</div>
+        <div class="backgroundInGame2 delete leftLine">2</div> 
+        <div class="backgroundInGame1 delete rightLine">3</div>
+        <div class="backgroundInGame2">4</div>
+        <div class="backgroundInGame1">5</div>
+        <div class="backgroundInGame2">6</div>
+        <div class="backgroundInGame1" id="pikabooEvent">7</div>
+        <div class="backgroundInGame2">8</div>
+        <div class="backgroundInGame1">9</div>
+        <div class="backgroundInGame2">110</div>
+        <div class="backgroundInGame1">111</div>
+        <div class="backgroundInGame2">12</div>
+        <div class="backgroundInGame1">13</div>
+        <div class="backgroundInGame2">14</div>
+        <div class="backgroundInGame1">15</div>
+        <div class="backgroundInGame2">16</div>
+        <div class="backgroundInGame1">17</div>
+        <div class="backgroundInGame2">18</div>
+        <div class="backgroundInGame1 delete leftLine">19</div>
+        <div class="backgroundInGame2 delete">120</div>
+        <div class="backgroundInGame1 delete topLine">21</div>
+        <div class="backgroundInGame2 delete topLine">22</div>
+        <div class="backgroundInGame1 delete topLine">23</div>
+        <div class="backgroundInGame2 delete topLine">24</div>
+        <div class="backgroundInGame1 delete topLine">25</div>
+        <div class="backgroundInGame2 delete topLine">26</div>
+        <div class="backgroundInGame1 delete topLine rightLine">27</div>
+        <div class="backgroundInGame2 ">28</div>
+        <div class="backgroundInGame1 ">29</div>
+        <div class="backgroundInGame2 ">130</div>
+        <div class="backgroundInGame1">31</div>
+        <div class="backgroundInGame2">32</div>
+        <div class="backgroundInGame1">33</div>
+        <div class="backgroundInGame2">34</div>
+        <div class="backgroundInGame1 ">35</div>
+        <div class="backgroundInGame2 delete leftLine">36</div>
+        <div class="backgroundInGame1 delete">37</div>
+        <div class="backgroundInGame2 delete">38</div> 
+        <div class="backgroundInGame1 delete">39</div>
+        <div class="backgroundInGame2 delete">140</div>
+        <div class="backgroundInGame1 delete">41</div>
+        <div class="backgroundInGame2 delete">42</div>
+        <div class="backgroundInGame1 delete">43</div>
+        <div class="backgroundInGame2 delete">44</div>
+        <div class="backgroundInGame1 delete topLine">45</div>
+        <div class="backgroundInGame2 delete topLine">46</div>
+        <div class="backgroundInGame1 delete topLine">47</div>
+        <div class="backgroundInGame2 delete topLine">48</div>
+        <div class="backgroundInGame1 delete topLine">49</div>
+        <div class="backgroundInGame2 delete topLine">150</div>
+        <div class="backgroundInGame1 delete topLine">51</div>
+        <div class="backgroundInGame2 delete topLine">52</div>
+        <div class="backgroundInGame1 delete">53</div>
+        <div class="backgroundInGame2 delete">54</div>
+        <div class="backgroundInGame1 delete">55</div>
+        <div class="backgroundInGame2 delete">56</div>
+        <div class="backgroundInGame1 delete">57</div>
+        <div class="backgroundInGame2 delete">58</div>
+        <div class="backgroundInGame1 delete">59</div>
+        <div class="backgroundInGame2 delete">60</div>
+        <div class="backgroundInGame1 delete">61</div>
+        <div class="backgroundInGame2 delete">62</div>
+        <div class="backgroundInGame1 delete">63</div>
+        <div class="backgroundInGame2 delete ">64</div>
+        <div class="backgroundInGame1 delete">65</div>
+        <div class="backgroundInGame2 delete">66</div>
+        <div class="backgroundInGame1 delete">67</div>
+        <div class="backgroundInGame2 delete">68</div>
+        <div class="backgroundInGame1 delete">69</div>
+        <div class="backgroundInGame2 delete">70</div>
+      </div>
+      <div class="black bottom">
+        <div class="more">PLAY MORE GAMES</div>
+        <div class="land">SNUBBY LAND</div>
+      </div>
+    </div>
+</body>
+<footer>
+
+</footer>
+
+</html>

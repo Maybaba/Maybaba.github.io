@@ -1,0 +1,187 @@
+@import url(./kibeom.css);
+
+/* 박스의 시작 대상 */
+.game .start {
+  /* background: green; */
+}
+
+/* 게임 배경 app.js에 맞게 bottomborder 아이디 선택 수정필요*/
+
+.game .delete {
+  background: #b4b5fe;
+  z-index: 10;
+  position: relative;
+}
+.game .bottomLine {
+  border-bottom: 5px solid black;
+  z-index: 10;
+}
+.game .topLine {
+  border-top: 5px solid black;
+  z-index: 10;
+}
+.game .leftLine {
+  border-left: 5px solid black;
+  z-index: 10;
+}
+.game .rightLine {
+  border-right: 5px solid black;
+  z-index: 10;
+}
+.game .box {
+  width: 20px;
+  height: 20px;
+  background:  red;
+  border: 5px solid #000;
+  z-index: 1000;
+  position: absolute;
+  top: 27.5%;
+  left: 13%;
+}
+
+/* 움직이는 대상 - 둥근 적 */
+
+#avoid-1 {
+  left: 5%;
+  bottom: 50%;
+  animation: moveBoxLi 1s linear infinite;
+}
+@keyframes moveBoxLi {
+  0% {
+    transform: translateX(0); 
+  }
+  50% {
+    transform: translateX(310px); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+#avoid-2 {
+  left: 60%;
+  bottom: 55%;
+  animation: moveBoxRain 1s linear infinite;
+}
+#avoid-3 {
+  left: 65%;
+  bottom: 59%;
+  animation: moveBoxRain 0.8s linear infinite;
+}
+#avoid-4 {
+  left: 70%;
+  bottom: 59%;
+  animation: moveBoxRain 0.6s linear infinite;
+}
+#avoid-5 {
+  left: 75%;
+  bottom: 75%;
+  animation: moveBoxRain 1.2s linear infinite;
+}
+#avoid-6 {
+  left: 80%;
+  bottom: 75%;
+  animation: moveBoxRain 1s linear infinite;
+}
+#avoid-7 {
+  left: 85%;
+  bottom: 60%;
+  animation: moveBoxRain 0.5s linear infinite;
+}
+@keyframes moveBoxRain {
+  0% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(130px); 
+  }
+  100% {
+    transform: translateY(0); 
+  }
+}
+
+
+
+/* 움직이는 대상 - 세모 적 */
+
+.avoidTriangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent; /* 왼쪽 선 */
+  border-right: 10px solid transparent; /* 오른쪽 선 */
+  border-bottom: 20px solid green; /* 아래쪽 선 */
+  z-index: 9;
+  position: absolute;
+}
+#avoid-8 {
+  left: 20%;
+  bottom: 28%;
+  animation: moveInSpiral 1s 1s linear infinite;
+}
+#avoid-9 {
+  left: 30%;
+  bottom: 25%;
+  animation: moveTriangleUp 1s 3s linear 1;
+}
+#avoid-10 {
+  left: 40%;
+  bottom: 25%;
+  animation: moveTriangleUp 1s 5s linear 1;
+}
+@keyframes moveInSpiral {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(50px) translateY(50px) rotate(40deg);
+  }
+  50% {
+    transform: translateX(100px) translateY(0) rotate(70deg);
+  }
+  75% {
+    transform: translateX(50px) translateY(-50px) rotate(100deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(180deg);
+  }
+}
+@keyframes moveTriangleUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+/* 움직이는 대상 - 코인 */
+
+#eat-1 {
+  position: absolute;
+  left: 49%;
+  bottom: 53%;
+}
+#eat-2 {
+  position: absolute;
+  left: 16%;
+  bottom: 32%;
+}
+#eat-3 {
+  position: absolute;
+  left: 24%;
+  bottom: 32%;
+}
+#eat-4 {
+  position: absolute;
+  left: 88%;
+  bottom: 24%;
+}
+#eat-5 {
+  position: absolute;
+  left: 8%;
+  bottom: 32%;
+} 
