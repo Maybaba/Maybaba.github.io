@@ -88,8 +88,8 @@ jobs:
         echo '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>My Projects</title></head><body>' > public/index.html
         echo '<h1>My Projects</h1><ul>' >> public/index.html
         echo '<li><a href="foodietree_FE/index.html">Foodietree FE (React)</a></li>' >> public/index.html
-        echo '<li><a href="hardestgame/index.html">Hardestgame (JavaScript)</a></li>' >> public/index.html
-        echo '<li><a href="workwave/index.html">Workwave (JSP + Java)</a></li>' >> public/index.html
+        echo '<li><a href="JSProject/index.html">Hardestgame (JavaScript)</a></li>' >> public/index.html
+        echo '<li><a href="SpringMidProject/index.html">Workwave (JSP + Java)</a></li>' >> public/index.html
         echo '</ul></body></html>' >> public/index.html
 
     # 테스트 리포트를 아티팩트로 저장
