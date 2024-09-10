@@ -38,14 +38,14 @@ jobs:
 
     - name: Copy JavaScript project
       run: |
-        mkdir -p public/JSProject
-        cp -r JSProject/* public/JSProject/
+        mkdir -p ${{ github.workspace }}/public/JSProject
+        cp -r ${{ github.workspace }}/JSProject/* ${{ github.workspace }}/public/JSProject/ 
 
 
     - name: Debug JSProject directory
       run: |
-        ls -R JSProject/
-        ls -R ../public/JSProject/
+        ls -R ${{ github.workspace }}/JSProject/
+        ls -R ${{ github.workspace }}/public/JSProject/
 
 
     # Checkout and build JSP + Java project
