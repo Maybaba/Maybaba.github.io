@@ -10,101 +10,112 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout the main repository
-      uses: actions/checkout@v2
+      - name: Checkout foodietree_BE
+        uses: actions/checkout@v2
+        with:
+          repository: FOODIETREE/foodietree_BE
+          path: foodietree_BE
+  
+      - name: Set executable permissions for gradlew
+        run: |
+          chmod +x foodietree_BE/gradlew
+  
+      - name: Build foodietree_BE
+        run: |
+          cd foodietree_BE
+          ./gradlew build
+  
+      - name: Checkout foodietree_FE
+        uses: actions/checkout@v2
+        with:
+          repository: FOODIETREE/foodietree_FE
+          path: foodietree_FE
 
     # Checkout and build React project
-    - name: Checkout React project
-      uses: actions/checkout@v2
-      with:
-        repository: FOODIETREE/foodietree_FE
-        path: foodietree_FE
-
-    - name: Build React project
-      run: |
-        cd foodietree_FE
-        npm install
-        CI=false npm run build
-        mkdir -p ../public/foodietree_FE/
-        cp -r build/* ../public/foodietree_FE/ 
-
+      - name: Build React project
+        run: |
+          cd foodietree_FE
+          npm install
+          CI=false npm run build
+          mkdir -p ../public/foodietree_FE/
+          cp -r build/* ../public/foodietree_FE/ 
 
     # Checkout and build JavaScript project
-    - name: Checkout JavaScript project
-      uses: actions/checkout@v2
-      with:
-        repository: Maybaba/JSProject
-        path: JSProject
+      - name: Checkout JavaScript project
+        uses: actions/checkout@v2
+        with:
+          repository: Maybaba/JSProject
+          path: JSProject
 
-    - name: Copy JavaScript project
-      run: |
-        mkdir -p ${{ github.workspace }}/public/JSProject
-        cp -r ${{ github.workspace }}/JSProject/* ${{ github.workspace }}/public/JSProject/ 
+      - name: Copy JavaScript project
+        run: |
+          mkdir -p ${{ github.workspace }}/public/JSProject
+          cp -r ${{ github.workspace }}/JSProject/* ${{ github.workspace }}/public/JSProject/ 
 
 
-    - name: Debug JSProject directory
-      run: |
-        ls -R ${{ github.workspace }}/JSProject/
-        ls -R ${{ github.workspace }}/public/JSProject/
+      - name: Debug JSProject directory
+        run: |
+          ls -R ${{ github.workspace }}/JSProject/
+          ls -R ${{ github.workspace }}/public/JSProject/
 
 
     # Checkout and build JSP + Java project
-    - name: Checkout JSP + Java project
-      uses: actions/checkout@v2
-      with:
-        repository: Maybaba/SpringMidProject
-        path: SpringMidProject
+      - name: Checkout JSP + Java project
+        uses: actions/checkout@v2
+        with:
+          repository: Maybaba/SpringMidProject
+          path: SpringMidProject
 
-    - name: Set executable permissions for gradlew
-      run: |
-        chmod +x SpringMidProject/gradlew
+      - name: Set executable permissions for gradlew
+        run: |
+          chmod +x SpringMidProject/gradlew
 
 
-    - name: Build JSP + Java project
-      run: |
-       cd SpringMidProject
-       ./gradlew build
-       mkdir -p ../public/SpringMidProject
-       cp -r src/main/webapp/WEB-INF/views/* ../public/SpringMidProject/
+      - name: Build JSP + Java project
+        run: |
+         cd SpringMidProject
+         ./gradlew build
+         mkdir -p ../public/SpringMidProject
+         cp -r src/main/webapp/WEB-INF/views/* ../public/SpringMidProject/
        
 
-    - name: Debug JSP build directory
-      run: |
-        cd SpringMidProject
-        ls -R build/
-        ls -R src/main/webapp/
+      - name: Debug JSP build directory
+        run: |
+          cd SpringMidProject
+          ls -R build/
+          ls -R src/main/webapp/
 
 
-    - name: Set up environment variables for H2
-      run: |
-        echo "SPRING_DATASOURCE_URL=jdbc:h2:mem:testdb" >> $GITHUB_ENV
-        echo "SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.h2.Driver" >> $GITHUB_ENV
-        echo "SPRING_DATASOURCE_USERNAME=sa" >> $GITHUB_ENV
-        echo "SPRING_DATASOURCE_PASSWORD=" >> $GITHUB_ENV
+      - name: Set up environment variables for H2
+        run: |
+          echo "SPRING_DATASOURCE_URL=jdbc:h2:mem:testdb" >> $GITHUB_ENV
+          echo "SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.h2.Driver" >> $GITHUB_ENV
+          echo "SPRING_DATASOURCE_USERNAME=sa" >> $GITHUB_ENV
+          echo "SPRING_DATASOURCE_PASSWORD=" >> $GITHUB_ENV
 
     # Generate index.html with links to the projects
-    - name: Generate index.html with project links
-      run: |
-        echo '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>My Projects</title></head><body>' > public/index.html
-        echo '<h1>My Projects</h1><ul>' >> public/index.html
-        echo '<li><a href="foodietree_FE/index.html">Foodietree FE (React)</a></li>' >> public/index.html
-        echo '<li><a href="JSProject/index.html">Hardestgame (JavaScript)</a></li>' >> public/index.html
-        echo '<li><a href="SpringMidProject/index.html">Workwave (JSP + Java)</a></li>' >> public/index.html
-        echo '</ul></body></html>' >> public/index.html
+      - name: Generate index.html with project links
+        run: |
+          echo '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>My Projects</title></head><body>' > public/index.html
+          echo '<h1>My Projects</h1><ul>' >> public/index.html
+          echo '<li><a href="foodietree_FE/index.html">Foodietree FE (React)</a></li>' >> public/index.html
+          echo '<li><a href="JSProject/index.html">Hardestgame (JavaScript)</a></li>' >> public/index.html
+          echo '<li><a href="SpringMidProject/index.html">Workwave (JSP + Java)</a></li>' >> public/index.html
+          echo '</ul></body></html>' >> public/index.html
 
     # 테스트 리포트를 아티팩트로 저장
-    - name: Upload Test Report
-      uses: actions/upload-artifact@v3
-      with:
-        name: test-report
-        path: workwave/build/reports/tests/test/  # 테스트 리포트 파일 경로
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: workwave/build/reports/tests/test/  # 테스트 리포트 파일 경로
 
     # Deploy to GitHub Pages
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-       github_token: ${{ secrets.GH_PAGES_TOKEN }}
-       publish_dir: ./public
-       publish_branch: gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+         github_token: ${{ secrets.GH_PAGES_TOKEN }}
+         publish_dir: ./public
+         publish_branch: gh-pages
 
 
