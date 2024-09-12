@@ -24,6 +24,7 @@ jobs:
         run: |
           cd foodietree_BE
           ./gradlew build
+          ls -R build/
   
       - name: Checkout foodietree_FE
         uses: actions/checkout@v2
