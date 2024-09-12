@@ -25,6 +25,10 @@ jobs:
           cd foodietree_BE
           ./gradlew build
           ls -R build/
+
+      - name: Verify backend build output
+        run: |
+          ls -R foodietree_BE/build/libs/
   
       - name: Checkout foodietree_FE
         uses: actions/checkout@v2
